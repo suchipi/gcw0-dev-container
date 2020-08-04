@@ -5,4 +5,6 @@ RUN mkdir -p /opt && cd /opt && tar jxvf /root/opendingux-gcw0-toolchain.2014-08
 
 RUN echo 'export PATH="$PATH:/opt/gcw0-toolchain/usr/bin"' >> /root/.bashrc
 
+RUN apt-get update && apt-get install -y build-essential gcc-multilib
+
 CMD /bin/bash
